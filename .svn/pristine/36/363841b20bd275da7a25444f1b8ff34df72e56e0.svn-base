@@ -1,0 +1,18 @@
+<table class="table table-striped"> 
+	<thead>
+			<tr>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>E-mail</th>
+				<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr ng-repeat="contact in contacts | filter:search | orderBy:'name'">
+				<td>{{contact.name}}</td>
+				<td>{{contact.phone}}</td>
+				<td>{{contact.email}}</td>
+				<td><button class="btn btn-danger btn-xs" ng-click="delete(contact)">Delete</button></td>
+			</tr>
+	</tbody>
+</table>	
